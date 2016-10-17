@@ -49,4 +49,3 @@ def error_handling():
             break
         # write the received data
         sys.stdout.write(buf    )
-error_handling()

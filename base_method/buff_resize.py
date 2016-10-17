@@ -6,6 +6,9 @@ SEND_BUF_SIZE = 4096
 RECV_BUF_SIZE =4096
 
 def modify_buff_size():
+    """
+        更改套接字的接/收buff size
+    """
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     # get sed buffer
@@ -18,5 +21,5 @@ def modify_buff_size():
     s.setsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF, SEND_BUF_SIZE)
     s.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, RECV_BUF_SIZE)
     print "Buffer size [after]: %s" %(s.getsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF))
-modify_buff_size()
+
 
