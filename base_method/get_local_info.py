@@ -3,6 +3,7 @@
 import socket
 from binascii import hexlify
 
+
 def convert_ipv4_address():
     """
         讲IP地址进行 打包 解包并格式输出
@@ -16,6 +17,7 @@ def convert_ipv4_address():
         print "IP Address : %s => packed: %s , Unpacked: %s" \
         % (ip_addr, hexlify(pack_ip_addr), unpack_ip_addr)
 
+
 def find_server_name():
     """
         根据PORT 找到对应的服务名称
@@ -25,6 +27,7 @@ def find_server_name():
     for port in [80, 25 ,21, 53]:
         server_name = socket.getservbyport(port)
         print "PORT : %s , SERVER_NAME : %s" % (port, server_name, )
+
 
 def convert_integer():
     """
@@ -56,4 +59,3 @@ def socket_timeout():
     print s.gettimeout()
 
 
-i

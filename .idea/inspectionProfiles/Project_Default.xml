@@ -4,7 +4,11 @@
     <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
       <option name="ignoredErrors">
         <list>
+<<<<<<< HEAD
           <option value="W292" />
+=======
+          <option value="E265" />
+>>>>>>> dbccced2fa89db27921ad4d24f37221a37c8c14b
         </list>
       </option>
     </inspection_tool>
