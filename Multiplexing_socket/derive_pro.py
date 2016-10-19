@@ -2,6 +2,7 @@ import os
 import socket
 import threading
 import SocketServer
+import time
 SERVER_HOST = 'localhost'
 SERVER_PORT = 0 # tells the kernel to pick up a port dynamically
 BUF_SIZE = 1024
@@ -59,6 +60,7 @@ def main():
     client2 =  ForkedClient(ip, port)
     client2.run()
     # Clean them up
+    time.sleep(120)
     server.shutdown()
     client1.shutdown()
     client2.shutdown()
