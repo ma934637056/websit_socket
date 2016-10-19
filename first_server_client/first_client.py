@@ -4,7 +4,7 @@ import socket
 import sys
 import argparse
 
-server_host = '127.0.0.1'
+server_host = 'www.baidu.com'
 
 def echo_client(port):
     try:
@@ -42,8 +42,9 @@ def echo_client(port):
         client.close()
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--port', action="store", dest="port", type=int, help="server socket port", required=False)
-    args_given = parser.parse_args()
-    port = args_given.port
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('--port', action="store", dest="port", type=int, help="server socket port", required=False)
+    # args_given = parser.parse_args()
+    # port = args_given.port
+    port = 80
     echo_client(port)

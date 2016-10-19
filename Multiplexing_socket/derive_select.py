@@ -10,6 +10,8 @@ import struct
 import sys
 ADDR = "localhost"
 
+#套接字建立连接是一次IO，连接的数据抵达也是一次IO
+
 
 def send(channel, **kwargs):
     buffer = cPickle.dumps(kwargs)
