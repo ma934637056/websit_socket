@@ -36,4 +36,4 @@ if __name__ == "__main__":
     parser.add_argument('--port', action="store", dest="port", type=int, help="server socket port", required=False)
     args_given = parser.parse_args()
     port = args_given.port
-    echo_server(port)
+    echo_server(8099)

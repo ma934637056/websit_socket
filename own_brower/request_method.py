@@ -1,0 +1,25 @@
+#coding:UTF-8
+
+import requests
+import urllib
+import urllib2
+
+import requests
+
+URL = 'http://ip.taobao.com/service/getIpInfo.php'  # 淘宝IP地址库API
+try:
+    r = requests.get(URL, params={'ip': '8.8.8.8'}, timeout=5)
+    # 查看当前编码格式
+    print r.encoding
+    r.raise_for_status()  # 如果响应状态码不是 200，就主动抛出异常
+except requests.RequestException as e:
+    print(e)
+else:
+    # resp.content 返回bytes型数据， 取得图片、文件、等
+    # res.content.decode("ISO-8859-1","ignore").encode("gbk","ignore") 解决乱码
+    print r.content
+    # resp.text 返回Unicode型数据， 取得文本等
+    print r.text
+    # 内置的json 我一解码json数据
+    result = r.json()
+    print type(result), result
